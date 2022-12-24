@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="maincolor" class="form">
+      <form action="#" id="form" class="form__body">
+        <h2 class="form__tilte">Любите акварель?</h2>
+        <h2 class="form__tilte">Добро пожаловать на сайт!</h2>
+
+        <div class="form__image">
+          <img
+            onclick="changeMe()"
+            id="mitt_image1"
+            src="./images/cats/aquarell2.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="form__item">
+          <div class="form__label">Акварельная бумага:</div>
+          
+            <select class="select" name="paper" id="">
+              <option value="0">Saunders Waterford</option>
+              <option value="1">Canson</option>
+              <option value="2">Белые ночи</option>
+            </select>
+          
+        </div>
+        <div class="form__item">
+          <div class="form__label">Текстура:</div>
+          
+            <select class="select" name="texture" id="">
+              <option value="0">torchon</option>
+              <option value="1">fin</option>
+              <option value="2">satin</option>
+            </select>
+         
+        </div>
+        <div class="form__item">
+          <div class="form__label">Плотность бумаги:</div>
+          
+            <select class="select" name="weight" id="">
+              <option value="0">300 г/м2</option>
+              <option value="1">200 г/м2</option>
+              <option value="2">150 г/м2</option>
+            </select>
+          
+        </div>
+        <div class="form__item">
+          <div class="form__label">Комплектация:</div>
+          <select  class="select" name="set">
+            
+            <option value="0" >Альбом</option>
+            <option value="1">В листах</option>
+            <option value="2" >Склейка</option>
+            
+          </select>
+         
+        </div>
+       
+        <div class="form__item">
+          <div class="form__label">Способ получения заказа:</div>
+          <div class="options">
+            <div class="options__item">
+              <input
+              id="formRightHanded"
+                class="options__input"
+                type="radio"
+                name="delivery"
+                value="pickpoint"
+                required
+                checked="checked"
+              />
+              <label class="options__label" for="formRightHanded"><span>Самовывоз</span> </label>
+            </div>
+            <div class="options__item">
+              <input
+              id="formLeftHanded"
+                class="options__input"
+                type="radio"
+                name="delivery"
+                value="address"
+                required
+                data-price="300"
+              />
+              <label class="options__label" for="formLeftHanded"><span></span>Доставка</span></label>
+            </div>
+          </div>
+        </div>
+
+    
+        <div class="form__item">
+          <label class="form__label" for="formName">Скидки! Введите код купона:</label>
+          <input onmouseover="colorMeN()" onmouseout="colorMeBackN()" class="form__input" id="formSale" type="text" name="coupon"/>
+        </div>
+
+        <div class="form__label">Оформить заказ</div>
+        <button  class="form__button">Посчитать</button>
+        <div class="result"></div>
+
+        <!-- <h3 class="form__subtilte">
+          Пожалуйста, заполните форму регистрации:
+        </h3>
+        <div
+            name="info"
+            id="hello"
+            class="hello-name"
+         ></div>
+        <div
+            name="info"
+            id="nameInfo"
+            class="error"
+         ></div>
+        <div class="form__item">
+          <label class="form__label" for="formName">*Имя</label>
+          <input onmouseover="colorMeN()" onmouseout="colorMeBackN()" class="form__input" id="formName" type="text" name="name"/>
+        </div>
+        <div class="form__item">
+          <label class="form__label" for="formEmail">*E-mail</label>
+          <input onmouseover="colorMeE()" onmouseout="colorMeBackE()" class="form__input" id="formEmail" type="email" name="email"/>
+        </div>
+        <div class="form__item">
+          <label  class="form__label" for="formPassword">*Пароль</label>
+          <input onmouseover="colorMeP()" onmouseout="colorMeBackP()" class="form__input" id="formPassword" type="text" name="password"/>
+        </div>
+        <div class="form__item">
+          <label class="form__label" for="formPhone">*Номер телефона</label>
+          <input class="form__input" id="formPhone" type="number" name="phone"/>
+        </div>
+        <div class="form__item">
+          <label class="form__label" >Пол
+            <select name="gender">
+              <option value="male">М</option>
+              <option value="female">Ж</option>
+              <option value="unknown">Нет</option>
+            </select>
+          </label>
+        </div>
+        <div class="form__item">
+          <div class="form__label">Есть домашний любимец?</div>
+          <div id="hand" class="options">
+            <div class="options__item">
+              <input
+                id="formRightHanded"
+                class="options__input"
+                type="radio"
+                name="hand"
+                value="right"
+                checked
+              />
+              <label class="options__label" for="formRightHanded"><span>Да, уже есть</span> </label>
+            </div>
+            <div class="options__item">
+              <input
+                id="formLeftHanded"
+                class="options__input"
+                type="radio"
+                name="hand"
+                value="left"
+              />
+              <label class="options__label" for="formLeftHanded"><span></span>Нет, собираюсь завести</span></label>
+            </div>
+          </div>
+        </div>
+        <div
+            name="info"
+            id="funInfo"
+            class="error"
+         ></div>
+        <div class="form__item">
+          <label class="form__label" for="formMessage">
+            Какие темы вас интересуют?</label>
+          <textarea
+            name="message"
+            id="formMessage"
+            class="form__input"
+          ></textarea>
+        </div>
+        <div class="form__item">
+          <div class="form__label">Какую породу предпочитаете?:</div>
+          <select onclick="show()" id="breed" class="select" name="cat">
+            
+            <option value="maine coon" >Мейн-кун</option>
+            <option value="bengal">Бенгальская</option>
+            <option value="oriental" >Ориентал</option>
+            <option value="siamese">Сиамская</option>
+            <option value="british shorthair" >Британская короткошерстная</option>
+            <option value="scottish">Шотландская вислоухая</option>
+            <option value="russian blue">Русская голубая</option>
+           
+            <option value="persian">Персидская</option>
+            <option value="nobreed">Дворовая</option>
+          </select>
+          <div id="cat" class="cat">
+            <img id="catImage" src="" alt="">
+          </div>
+        </div>
+        <div class="form__item">
+          <div class="form__label">Хотите поменять цвет фона?</div>
+          <select id="shadeOption" onchange="select()"   class="select" name="color">
+            <option  value="green" >Зеленый</option>
+            <option  value="orange">Оранжевый</option>
+            <option  value="red">Красный</option>
+          </select>
+        </div>
+       
+        <div class="form__item">
+          <div class="checkbox">
+            <input
+              id="formAgreement"
+              type="checkbox"
+              name="agreement"
+              class="checkbox__input"
+              
+            />
+            <label class="checkbox__label" for="formAgreement"
+              ><span> Я согласен с <a href=""> политикой конфиденциальности</a>*</span></label
+            >
+          </div>
+        </div>
+        <div
+            name="info"
+            id="errorInfo"
+            class="error"
+         ></div>
+        
+        <button  class="form__button" type="submit">Отправить</button> -->
+      </form>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="maincolor" class="form">
+      <div class="form__item">
+        <label class="form__label" for="formName"
+          >Добавьте числа в массив</label
+        >
+        <input
+          onmouseover="colorMeN()"
+          onmouseout="colorMeBackN()"
+          class="form__input"
+          id="formName"
+          type="text"
+          name="name"
+        />
+      </div>
+      <div class="info form__item">
+        <div class="form__label">Массив:</div>
+        <div class="array form__item"></div>
+        <div class="form__label">Отсортированный массив:</div>
+        <div class="sorted form__item"></div>
+        <div class="form__label">Сумма равна:</div>
+        <div class="sum form__item"></div>
+      </div>
+
+      <button class="form__button">Готово</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
